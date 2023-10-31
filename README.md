@@ -33,3 +33,9 @@ syntax:include:["src"]
 
 Typescript:typescript is strongly typed langangued which is staticaly typed it is checked in compile time
 JavaScript:Javascript is lossly typed language which is dynamacily type which mean it is checked in run time
+
+<!-- benifit of type script  -->
+
+1.self documentation of code
+2.catching error in dev time
+3.greate for teams

@@ -49,19 +49,22 @@ const total = (a, ...num) => {
         }));
 };
 logMsg(total(1, 2, 3));
-// never type
-// never type is used for when anything is infine
 const isnumber = (value) => {
     return typeof value === "number" ? true : false;
 };
+// never type
+// never type is used for when anything is infinite or errorw throw
+//  use of never type
 const createError = (errmsg) => {
     throw new Error(errmsg);
 };
-//  use of never type
+// const numberOrString = (value: number | string): string => {
+//   if (typeof value === "string") return "string";
+//   if (typeof value === "number") return "number";
+//   return createError("This should never happen!");
+// };
+// using isnumber
 const numberOrString = (value) => {
-    if (typeof value === "string")
-        return "string";
-    if (typeof value === "number")
-        return "number";
-    return createError("This should never happen!");
+    return isnumber(value) ? "number" : "string";
 };
+console.log(numberOrString(8));

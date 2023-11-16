@@ -1,3 +1,4 @@
+// in class we define variable in side constructor and acess private member
 class car {
   constructor(
     public name: string,
@@ -19,6 +20,7 @@ class bike extends car {
     price: number,
     serialno: number
   ) {
+    // we use super class when we extend
     super(name, price, serialno);
   }
 

@@ -2,10 +2,11 @@
 // type aliease
 type One = string;
 type Two = string | number;
-type Three = "hellow";
+type Three = "hello";
 
 let a: One = "hellow";
-let b = a as Two;
+let b = a as Three;
+
 console.log(b);
 let c = a;
 console.log(c);
@@ -24,7 +25,7 @@ const addOrConcat = (
   return "" + a + b;
 };
 // we are force fully doing it
-let myval: string = addOrConcat(2, 2, "concat") as string;
+let myval: string = <string>addOrConcat(2, 2, "concat");
 
 // Be careful ts see no problem - but a string is returned
 let nextVal: number = addOrConcat(2, 2, "concat") as number;

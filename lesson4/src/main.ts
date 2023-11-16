@@ -18,7 +18,8 @@ let myName: "sachin";
 // literal are where we want to use only that perticular values
 
 let userName: "Sachin" | "Annu" | "Suruchi";
-
+type name = "x" | "y" | "z";
+let nameof: name = "z";
 userName = "Suruchi";
 console.log(userName);
 
@@ -32,7 +33,7 @@ const logMsg = (meassage: any) => {
 };
 
 logMsg("hellow");
-logMsg(add(2, 3));
+console.log(logMsg(add(2, 3)));
 
 // alise for matmatical operation
 type math = (a: number, b: number) => number;
@@ -79,7 +80,6 @@ const total = (a: number, ...num: number[]): number => {
     })
   );
 };
-logMsg(total(1, 2, 3));
 
 const isnumber = (value: any): boolean => {
   return typeof value === "number" ? true : false;
